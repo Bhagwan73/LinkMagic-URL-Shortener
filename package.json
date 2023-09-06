@@ -1,28 +1,28 @@
 {
-  "name": "LinkMagic-URL-Shortener",
+  "name": "linkmagic-url-shortener",
   "version": "1.0.0",
-  "description": "",
+  "description": "URL shortening is used to create shorter aliases for long URLs. We call these shortened aliases “short links.” Users are redirected to the original URL when they hit these short links. Short links save a lot of space when displayed, printed, messaged, or tweeted. Additionally, users are less likely to mistype shorter URLs.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bhagwan73/project_4_URL_shortner.git"
+    "url": "git+https://github.com/Bhagwan73/LinkMagic-URL-Shortener.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Bhagwan73/project_4_URL_shortner/issues"
+    "url": "https://github.com/Bhagwan73/LinkMagic-URL-Shortener/issues"
   },
-  "homepage": "https://github.com/Bhagwan73/project_4_URL_shortner#readme",
+  "homepage": "https://github.com/Bhagwan73/LinkMagic-URL-Shortener#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "ioredis": "^5.3.2",
-    "mongoose": "^6.12.0",
+    "mongoose": "^7.5.0",
     "shortid": "^2.2.16"
   }
 }

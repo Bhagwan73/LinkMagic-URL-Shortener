@@ -1,7 +1,7 @@
 const urlModel = require('../models/urlModel');
 const shortId= require('shortid');
 const axios=require("axios");
-const {SET_ASYNC,GET_ASYNC}=require("./redis")
+const {redis}=require("./redis")
 
 //                       <<<-->>>-CHECK_VALID_STRING-<<<-->>>
 const isValidString = function (value) {
@@ -33,7 +33,7 @@ exports.createUrl=async function(req,res){
     let unique=await urlModel.findOne({longUrl}).select({_id:0,createdAt:0,updatedAt:0,__v:0})
     if(unique) {
         //SET_URL_DOCUMENT_IN_CATCHES_DATABASE
-        await SET_ASYNC(longUrl,JSON.stringify(unique))
+        await redis.setex(longUrl,600,JSON.stringify(unique))
         return res.status(200).send({status:true,data:unique})
     }              
      //GENERATE_SHORT_ID_BY_USING_SHORTID_PACKAGE
@@ -65,7 +65,7 @@ exports.getURL=async function(req,res){
     const {urlCode}=req.params
     if(!shortId.isValid(urlCode)) return res.status(400).send({status:false,msg:`this ${urlCode} is not valid`})
     //FIND_DATA_IN_CATCHES
-    let fetchURLdocument=await GET_ASYNC(urlCode)
+    let fetchURLdocument=await redis.get(urlCode)
     if(fetchURLdocument){                                             //-- CATCH_HIT
         //CONVERT_STRING_TO_JSON
         var data = JSON.parse(fetchURLdocument);
@@ -73,7 +73,7 @@ exports.getURL=async function(req,res){
     }else{     
         //FIND_DATA_IN_DATABASE                                         //-- CATCH_MISS
         let url=await urlModel.findOne({urlCode:urlCode}).select({_id:0,createdAt:0,updatedAt:0,__v:0})
-        await SET_ASYNC(urlCode, JSON.stringify(url))   
+        await redis.setex(urlCode, 600,JSON.stringify(url))   
         return res.status(302).redirect(url.longUrl)
     }
 }
