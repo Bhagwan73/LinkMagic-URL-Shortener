@@ -1,5 +1,5 @@
 {
-  "name": "project_4_url_shortner",
+  "name": "LinkMagic-URL-Shortener",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -18,12 +18,11 @@
   },
   "homepage": "https://github.com/Bhagwan73/project_4_URL_shortner#readme",
   "dependencies": {
-    "axios": "^1.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "mongoose": "^6.8.0",
-    "nodemon": "^2.0.20",
-    "redis": "^3.1.2",
-    "shortid": "^2.2.16",
-    "util": "^0.12.5"
+    "ioredis": "^5.3.2",
+    "mongoose": "^6.12.0",
+    "shortid": "^2.2.16"
   }
 }
