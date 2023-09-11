@@ -27,9 +27,9 @@ In this section, we'll showcase the responsive views of  our app with a stylish 
 | ![Screenshot (497)](https://github.com/Bhagwan73/LinkMagic-URL-Shortener/assets/115549589/53e41cb9-ed38-413d-88df-69d723ac6b60) | ![Screenshot (498)](https://github.com/Bhagwan73/LinkMagic-URL-Shortener/assets/115549589/c82934f4-13bc-476b-8bcd-2f858f7a732f) |
 
 
-#### Laptop View
-
-![Screenshot (499)](https://github.com/Bhagwan73/LinkMagic-URL-Shortener/assets/115549589/b51b4b7f-fa44-4931-b69f-515a0a3bdd69)
+| Laptop View |
+| ----------- |
+| ![Screenshot (499)](https://github.com/Bhagwan73/LinkMagic-URL-Shortener/assets/115549589/b51b4b7f-fa44-4931-b69f-515a0a3bdd69)| 
 
 
 ## 📈 Usage
@@ -50,7 +50,7 @@ Using LinkMagic-URL-Shortener is a breeze. Follow these steps to get started:
 
 ## Installation
 
-To run this Task Manager App locally, follow these steps:
+To run this LinkMagic-URL-Shortener App locally, follow these steps:
 
 1. **Clone the repository:**
 
@@ -90,7 +90,7 @@ To run this Task Manager App locally, follow these steps:
 
    ```bash
    npm start
-    ``
+    ```
 
 7. **Access the app:**
 
