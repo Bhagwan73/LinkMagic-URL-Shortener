@@ -11,6 +11,7 @@ export default function Home() {
             alert("Please enter a URL before continuing.")
             return;
         }
+        setShortUrl("Please wait ...")
         fetch(`${process.env.REACT_APP_BACKEND_URL}/shortURL`, {
             method: 'POST',
             body:JSON.stringify({longUrl:url}),
